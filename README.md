@@ -1,0 +1,2 @@
+# COAT
+COverage Analysis Tool
