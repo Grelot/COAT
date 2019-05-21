@@ -77,7 +77,9 @@ Reference annotated sequence is needed. This file contains gene	annotation of th
 | complete flag argument | short flag |Default value | Summary |
 | --- | --- | --- | --- |
 | `--output` | `-o` | stdout | Output folder path. Will overwrite contents if file exists. |
-
+| Select region |
+| `--position | `-p` | _NA_ | Interval positions in chromosome of the reference sequence 
+FORMAT: _chr:start-end_ |
 
 
 
