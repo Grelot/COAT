@@ -20,6 +20,7 @@ files contain mapped reads sequence from Next Generation Sequencing.
 To use COAT, the following programs are necessary  :
 
 * [python 2.6](https://www.python.org/download/releases/2.6/)
+* [PyQt4](https://pypi.org/project/PyQt4/)
 * [samtools 1.3](https://sourceforge.net/projects/samtools/files/samtools/1.3/)
 
 The following files are necessary :
@@ -40,7 +41,15 @@ If you don’t have Python, type the following command to install python version
 
 ```
 sudo apt-get install python 2.6
+```
 
+## GUI toolkit PyQt4 
+
+If you want to use COAT graphical interface, you will need to install the python module `PyQt4`
+
+```
+apt-cache search pyqt
+sudo apt-get install python-qt4
 ```
 
 ## Samtools
