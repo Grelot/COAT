@@ -4,7 +4,13 @@ Outputs a list of coding regions that are uncovered above a given threshold
 
 # Overview
 
-The output is a spreadsheet with all the coding regions which are uncovered.
+- COAT is a Python2 program developed in 2016 program which aims to automatically find bad quality region of coding sequences in a set of individual exome sequencing data.
+
+- It is a module integrated to [ExAM](https://sourceforge.net/projects/exam-exome-analysis-and-mining/).
+
+- It includes a graphical interface.
+
+- The output of this program is a spreadsheet with all the coding regions which are uncovered.
 Supplementary annotation can be used for further analysis. Additional files can be
 generated using `--cover_output` argument and/or `--track_no_cover_UCSC_output`.
 
