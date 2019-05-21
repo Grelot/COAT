@@ -88,20 +88,20 @@ This table summarizes the command-line arguments which are using by COAT.
 | complete flag argument | short flag |Default value | Summary |
 | --- | --- | --- | --- |
 | `--output` | `-o` | stdout | Output folder path. Will overwrite contents if file exists |
-| `--position` | `-p` | _NA_ | Interval positions in chromosome of the reference sequence FORMAT: _chr:start-end_ |
-| `--geneName` | `g` | _NA_ | Select region of the gene. FORMAT: name of the gene according to reference |
+| `--position` | `-p` | NA | Interval positions in chromosome of the reference sequence FORMAT: _chr:start-end_ |
+| `--geneName` | `-g` | NA | Select region of the gene. FORMAT: name of the gene according to reference |
 | `--cds_regions` | `-cds` | TRUE | regions of exons which are not into UTR in the reference sequence |
 | `--add_utr_regions` | `-add_utr` | FALSE | Add UTR to the selected region |
 | `--add_intron_regions` | `-add_intron` | FALSE | Add intron regions to the selected region |
-| `--bamsPath` | `-bams` | _NA_ | BAM files folder |
-| `--subject_list` | `-subject` | _NA_ | Coma-separated list of prefix BAM files name(s) of selected subject in BAM files repertory |
+| `--bamsPath` | `-bams` | NA | BAM files folder |
+| `--subject_list` | `-subject` | NA | Coma-separated list of prefix BAM files name(s) of selected subject in BAM files repertory |
 | `--coverage_threshold` | `-cov` | 5 | The minimum coverage to be actually considered as _covered_ |
 | `--mapQuality_threshold` | `-mapqual` | 20 | The minimum allowable mapping quality score to be counted for coverage |
 | `--baseQuality_trehshold` | `-basequal` | 0 | The minimum allowable base quality score to be counted for coverage |
 | `--cover_output` | `-covout` | FALSE | Output as a supplementary file the list of covered regions with annotation |
 | `--track_no_cover_UCSC_output` | `-track` | FALSE | Output [UCSC Genome Brower custom track](https://genome.ucsc.edu/cgi-bin/hgGateway) which contains uncovered regions |
-| `--refPath` | `-ref` | _NA_ | Annotation file for reference _e.g._ hg19 |
-| `--samtoolsPath` | `-samtools` | _NA_ | Samtools 1.3 folder path |
+| `--refPath` | `-ref` | NA | Annotation file for reference _e.g._ hg19 |
+| `--samtoolsPath` | `-samtools` | NA | Samtools 1.3 folder path |
 
 # Example of command
 
