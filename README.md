@@ -57,10 +57,28 @@ make
 
 Store your BAM files into a dedicated folder. Prefix of BAM files name is used as subject identifier (see command-line argument `--subject_list`).
 
-<p align="center">
-  <img src="https://github.com/Grelot/diabeteGenetics--COAT/tree/master/images/bam_schema_folder.png"  title="bam_schema_folder">
- 
-</p>
+<img src="https://github.com/Grelot/diabeteGenetics--COAT/blob/master/images/bam_schema_folder.png"  title="bam_schema_folder">
+
+Samtools folder must be specified (see command-line argument `--samtoolsPath`)
+BAM files must be indexed. To generate Index of BAM files, use samtools line-commands:
+
+```
+samtools sort -T /tmp/aln.sorted -o aln.sorted.bam aln.bam
+samtools index aln.sorted.bam
+```
+
+## Reference sequence annotation file
+
+Reference annotated sequence is needed. This file contains gene	annotation of the genome reference you want to use. You can get file for h19 reference:
+- http://hgdownload.cse.ucsc.edu/goldenPath/hg19/database/refFlat.txt.gz
+
+# Command-line Arguments
+
+| complete flag argument | short flag |Default value | Summary |
+| --- | --- | --- | --- |
+| `--output` | `-o` | stdout | Output folder path. Will overwrite contents if file exists. |
+
+
 
 
 
