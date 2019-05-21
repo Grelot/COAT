@@ -74,13 +74,110 @@ Reference annotated sequence is needed. This file contains gene	annotation of th
 
 # Command-line Arguments
 
+This table summarizes the command-line arguments which are using by COAT. 
+
 | complete flag argument | short flag |Default value | Summary |
 | --- | --- | --- | --- |
-| `--output` | `-o` | stdout | Output folder path. Will overwrite contents if file exists. |
-| Select region |
-| `--position | `-p` | _NA_ | Interval positions in chromosome of the reference sequence 
-FORMAT: _chr:start-end_ |
+| `--output` | `-o` | stdout | Output folder path. Will overwrite contents if file exists |
+| `--position` | `-p` | _NA_ | Interval positions in chromosome of the reference sequence FORMAT: _chr:start-end_ |
+| `--geneName` | `g` | _NA_ | Select region of the gene. FORMAT: name of the gene according to reference |
+| `--cds_regions` | `-cds` | TRUE | regions of exons which are not into UTR in the reference sequence |
+| `--add_utr_regions` | `-add_utr` | FALSE | Add UTR to the selected region |
+| `--add_intron_regions` | `-add_intron` | FALSE | Add intron regions to the selected region |
+| `--bamsPath` | `-bams` | _NA_ | BAM files folder |
+| `--subject_list` | `-subject` | _NA_ | Coma-separated list of prefix BAM files name(s) of selected subject in BAM files repertory |
+| `--coverage_threshold` | `-cov` | 5 | The minimum coverage to be actually considered as _covered_ |
+| `--mapQuality_threshold` | `-mapqual` | 20 | The minimum allowable mapping quality score to be counted for coverage |
+| `--baseQuality_trehshold` | `-basequal` | 0 | The minimum allowable base quality score to be counted for coverage |
+| `--cover_output` | `-covout` | FALSE | Output as a supplementary file the list of covered regions with annotation |
+| `--track_no_cover_UCSC_output` | `-track` | FALSE | Output [UCSC Genome Brower custom track](https://genome.ucsc.edu/cgi-bin/hgGateway) which contains uncovered regions |
+| `--refPath` | `-ref` | _NA_ | Annotation file for reference _e.g._ hg19 |
+| `--samtoolsPath` | `-samtools` | _NA_ | Samtools 1.3 folder path |
 
+# Example of commands
+
+```
+python2 coverageAnalysis.py \
+-gene GLIS3 \
+-cds \
+-add_utr \
+-bams /storage/bams/ \
+-subject family1_1,family1_3 \
+-ref refFlat_hg19.txt \
+-cov 15 \
+-o coverage_check_results/
+```
+
+# Output
+
+## List of uncovered/covered coding regions with annotation
+
+| Chrom | Uncovered_start | Uncovered_end | subject | gene |transcript | Exon_numb | Uncovered_length |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Chr9 | 3937027 | 3937120 | Family1_1 | GLIS3 | NM_001042413 | 5 | 94 |
+| Chr9 | 3937027 | 3937074 | Family1_3 | GLIS3 | NM_001042413 | 5 | 48 |
+
+Each row is an uncovered region. 
+- Chrom: chromosome.
+- Uncovered_start: the reference start position of an uncovered region.
+- Uncovered_end: the reference end position of an uncovered region.
+- subject: the sequenced subject identifier.
+- gene: name of the gene including the uncovered region.
+- transcript: name of the transcript of the gene including the uncovered region.
+- exon_numb: numb of the exon of the transcript of the gene including the uncovered region. This field can optionally mention UTR5’, UTR3’ and intron region.
+- uncovered_length: number of nucleotides in the uncovered region.
+
+## UCSC Genome browser custom track of uncovered region
+
+<img src="https://github.com/Grelot/diabeteGenetics--COAT/blob/master/images/genome_browser_custom_track.png"  title="genome_browser_custom_track">
+
+Visualising uncovered region on gene GLIS3 of the 2 subjects from family 1 with UCSC Genome Browser. Annotation from REFSEQ have been added. In red, uncovered region. 
+
+
+# Interface
+
+To run in graphical mode the program :
+```
+python2 Interface/coat_HCI.pyw
+```
+
+This command will display the following interface :
+
+<img src="https://github.com/Grelot/diabeteGenetics--COAT/blob/master/images/coat_graphics.png"  title="coat_graphics">
+
+
+1. Advanced settings, save settings and reset 
+Click on Advanced settings to access advanced settings section.
+
+* bam files folder: path of the folder in which your BAM files and BAM.bai files are stored.
+* samtools folder: path of the folder in which samtools 1.3 is stored.
+* Hg reference table file: path of the reference annotated sequence.
+* Results folder: output folder path. Will overwrite contents if file exists. 
+
+Save settings will save all your settings for the next time you will use COAT. Reset gives the default value for all settings.
+
+2. Select subject 
+
+Fill the fields with your coma-separated list of prefix BAM files name(s) of selected subject in BAM files folder.
+
+3. Select region
+
+Select the region to check by specify coordinates else or gene name. Coordinates refers to an interval positions in chromosome of the reference sequence (FORMAT: chr:start-end). By default, coverage check is running on CDS region. But you can add UTR and intron region by toggle the corresponding option.
+
+4. Select coverage thresholds
+
+3 thresholds are availables: 
+- the minimum allowable coverage depth to be considered covered (default value = 5);
+- the minimum allowable mapping quality score to be counted for coverage (default value = 20);
+- the minimum allowable base quality score to be counted for coverage (default value = 0).
+
+5. Generate additional files 
+
+By default, output is a list of uncovered coding regions with annotation. You can add by toggle the corresponding option: a list of covered regions with annotation; an UCSC custom track which contains uncovered regions.
+
+6. Launch and quit
+
+When all your parameters are selected, click on launch coverage check to run COAT.
 
 
 
