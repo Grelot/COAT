@@ -57,9 +57,10 @@ make
 
 Store your BAM files into a dedicated folder. Prefix of BAM files name is used as subject identifier (see command-line argument `--subject_list`).
 
-![alt text](https://github.com/Grelot/diabeteGenetics--COAT/tree/master/images/bam_schema_folder.png)
-
-
+<p align="center">
+  <img src="https://github.com/Grelot/diabeteGenetics--COAT/tree/master/images/bam_schema_folder.png"  title="bam_schema_folder">
+ 
+</p>
 
 
 
