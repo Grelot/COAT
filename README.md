@@ -94,7 +94,7 @@ This table summarizes the command-line arguments which are using by COAT.
 | `--refPath` | `-ref` | _NA_ | Annotation file for reference _e.g._ hg19 |
 | `--samtoolsPath` | `-samtools` | _NA_ | Samtools 1.3 folder path |
 
-# Example of commands
+# Example of command
 
 ```
 python2 coverageAnalysis.py \
@@ -113,7 +113,7 @@ python2 coverageAnalysis.py \
 ## List of uncovered/covered coding regions with annotation
 
 | Chrom | Uncovered_start | Uncovered_end | subject | gene |transcript | Exon_numb | Uncovered_length |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Chr9 | 3937027 | 3937120 | Family1_1 | GLIS3 | NM_001042413 | 5 | 94 |
 | Chr9 | 3937027 | 3937074 | Family1_3 | GLIS3 | NM_001042413 | 5 | 48 |
 
