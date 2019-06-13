@@ -1,3 +1,10 @@
+dist: trusty
+before_install:
+       - apt-cache search pyqt
+       - sudo apt-get install python-qt4
+
 language: python
-rvm:
-        - 2.6
+python:
+        - "2.6"
+script:
+        - pytest
