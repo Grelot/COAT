@@ -1,12 +1,17 @@
+[![EXAM SOURCEFORGE](https://sourceforge.net/sflogo.php?type=13&group_id=96355)](https://sourceforge.net/projects/exam-exome-analysis-and-mining/)
+
+[![EXAM downloads](https://img.shields.io/sourceforge/dt/exam-exome-analysis-and-mining/..svg)](https://sourceforge.net/projects/exam-exome-analysis-and-mining/files/latest/download)
+
+
 # CoverageAnalysisTool
 
 Outputs a list of coding regions that are uncovered above a given threshold
 
 # Overview
 
-- COAT is a Python2 program developed in 2016 program which aims to automatically find bad quality region of coding sequences in a set of individual exome sequencing data.
+- COAT is a Python2 program developed in 2016 which aims to automatically find bad quality region of coding sequences in a set of individual exome sequencing data.
 
-- It is a module integrated to [ExAM](https://sourceforge.net/projects/exam-exome-analysis-and-mining/).
+- It is a module integrated to the [EXome Analysis and Mining](https://sourceforge.net/projects/exam-exome-analysis-and-mining/). [![Download EXAM](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/exam-exome-analysis-and-mining/)
 
 - It includes a graphical interface.
 
