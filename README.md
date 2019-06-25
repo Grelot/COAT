@@ -11,7 +11,7 @@ Outputs a list of coding regions that are uncovered above a given threshold
 
 - COAT is a Python2 program developed in 2016 which aims to automatically find bad quality region of coding sequences in a set of individual exome sequencing data.
 
-- It is a module integrated to the [EXome Analysis and Mining](https://sourceforge.net/projects/exam-exome-analysis-and-mining/). [![Download EXAM](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/exam-exome-analysis-and-mining/)
+- It is a module integrated to the [EXome Analysis and Mining](https://sourceforge.net/projects/exam-exome-analysis-and-mining/).
 
 - It includes a graphical interface.
 
@@ -165,8 +165,9 @@ This command will display the following interface :
 
 <img src="https://github.com/Grelot/diabeteGenetics--COAT/blob/master/images/coat_graphics.png"  title="coat_graphics">
 
+______
 
-1. Advanced settings, save settings and reset 
+## 1. Advanced settings, save settings and reset 
 Click on Advanced settings to access advanced settings section.
 
 * bam files folder: path of the folder in which your BAM files and BAM.bai files are stored.
@@ -176,26 +177,26 @@ Click on Advanced settings to access advanced settings section.
 
 Save settings will save all your settings for the next time you will use COAT. Reset gives the default value for all settings.
 
-2. Select subject 
+## 2. Select subject 
 
 Fill the fields with your coma-separated list of prefix BAM files name(s) of selected subject in BAM files folder.
 
-3. Select region
+## 3. Select region
 
 Select the region to check by specify coordinates else or gene name. Coordinates refers to an interval positions in chromosome of the reference sequence (FORMAT: chr:start-end). By default, coverage check is running on CDS region. But you can add UTR and intron region by toggle the corresponding option.
 
-4. Select coverage thresholds
+## 4. Select coverage thresholds
 
 3 thresholds are availables: 
 - the minimum allowable coverage depth to be considered covered (default value = 5);
 - the minimum allowable mapping quality score to be counted for coverage (default value = 20);
 - the minimum allowable base quality score to be counted for coverage (default value = 0).
 
-5. Generate additional files 
+## 5. Generate additional files 
 
 By default, output is a list of uncovered coding regions with annotation. You can add by toggle the corresponding option: a list of covered regions with annotation; an UCSC custom track which contains uncovered regions.
 
-6. Launch and quit
+## 6. Launch and quit
 
 When all your parameters are selected, click on launch coverage check to run COAT.
 
