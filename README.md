@@ -1,3 +1,7 @@
+<img class="center" src="https://github.com/Grelot/diabeteGenetics--COAT/blob/master/images/logo.png"  title="coat_logo">
+
+
+
 [![EXAM SOURCEFORGE](https://sourceforge.net/sflogo.php?type=13&group_id=96355)](https://sourceforge.net/projects/exam-exome-analysis-and-mining/)
 
 [![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive) [![EXAM downloads](https://img.shields.io/sourceforge/dt/exam-exome-analysis-and-mining/..svg)](https://sourceforge.net/projects/exam-exome-analysis-and-mining/files/latest/download)
