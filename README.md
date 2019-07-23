@@ -1,4 +1,4 @@
-<img class="center" src="https://github.com/Grelot/diabeteGenetics--COAT/blob/master/images/logo.png"  title="coat_logo">
+<img src="https://github.com/Grelot/diabeteGenetics--COAT/blob/master/images/logo.png"  title="coat_logo">
 
 
 
